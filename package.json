@@ -1,0 +1,15 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "learning\u001b[1;5D\u001b[1;5D\u001b[D\u001b[1;5D\u001b[D\u001b[D\u001b[D\u001b[DExpress\u001b[ learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "express-learning"
+  },
+  "author": "prakash pawar",
+  "license": "ISC"
+}
