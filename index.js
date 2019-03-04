@@ -1,17 +1,25 @@
-//Basic Express BoilerPlate
-
-//import Express
 const express = require("express");
-
-//create an instance of express API
+//we need path module
+const path = require("path");
+//init the instance of express
 const app = express();
 
-//create endpoints/route handlers
-//using .get("path url", callback)
-//in callback req and res position matters
-app.get("/", (req, res) => {
-  res.send("hello Express World!");
-});
+//now cannot GET "/" it means it unable to find the route hanlder for port "/"
 
-//call this endpoint/ start server
-app.listen(5555, console.log("Server is running on port 5555"));
+//create a route handler using get request handler()
+// app.get("/", (req, res) => {
+//   // res.send("<h1>HI i am at home page</h1>");
+//   // res.sendFile(path.join(__dirname, "Notes.html"));
+
+// });
+//---------------
+
+//set a static  folder(dirname,and folder name only)
+app.use(express.static(path.join(__dirname, "public")));
+//---------------
+
+//create a port variable
+const PORT = process.env.PORT || 5000;
+
+//start app using  .listen()
+app.listen(PORT, _ => console.log(`server started on ${PORT}`));
