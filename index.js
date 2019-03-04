@@ -4,6 +4,17 @@ const path = require("path");
 //init the instance of express
 const app = express();
 
+//now we will create a Middleware
+// it will be a logger function
+// it will take 3 params (req,res,next)
+//here next is next function to run after resloving
+const logger = (req, res, next) => {
+  console.log(`${req.protocol}:${req.hostname}${req.originalUrl}`);
+  next();
+};
+//now we will initialize or call Middleware
+app.use(logger);
+
 //get members module
 const members = require("./Members");
 app.get("/api/members", (req, res) => {
