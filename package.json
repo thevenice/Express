@@ -1,15 +1,20 @@
 {
-  "name": "express",
+  "name": "express-learning",
   "version": "1.0.0",
-  "description": "learning\u001b[1;5D\u001b[1;5D\u001b[D\u001b[1;5D\u001b[D\u001b[D\u001b[D\u001b[DExpress\u001b[ learning",
+  "description": "learning express",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
   },
   "repository": {
     "type": "git",
     "url": "express-learning"
   },
   "author": "prakash pawar",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
