@@ -246,3 +246,29 @@
     <li>thats it for CRUD in Express</li>
   </ul>
 </div>
+<div>
+  <h3>Express_handlebars: A template engine for Express</h3>
+  <ul>
+    <li>
+      to use it install express-handlebars, and create folder name views in root
+      of project and then create another folder inside it called layouts.
+    </li>
+    <li>
+      now in view folder create index.handlebars (yes .handlebars as extension)
+      and create one file in layouts folder with name main.handlebars
+    </li>
+    <li>
+      now in our main server file index.js import express-handlebars as exphbs
+      and create a Middleware. Middle will use .engine() and .set() methods.
+    </li>
+    <li>
+      Example:
+      <code>
+        //Handlebars Middleware //engine app.engine("handlebars", exphbs({
+        defaultLayout: "main" })); //set view engine app.set("view engine",
+        "handlebars"); // HomePage using Handlebars app.get("/", (req, res) => {
+        res.render("index", { title: "Handlebars", members }); });
+      </code>
+    </li>
+  </ul>
+</div>

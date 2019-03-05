@@ -1,0 +1,10 @@
+<h1 class="text-center mb-3">{{title}}</h1>
+{{!-- mapping in handlebars --}}
+<ul>
+  {{#each members}}
+  <li>Name: {{name}}</li>
+  <li>Email: {{email}}</li>
+  <li>Status: {{status}}</li>
+  <br />
+  {{/each}}
+</ul>
