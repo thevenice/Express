@@ -57,10 +57,10 @@ router.post("/", (req, res) => {
   members.push(newMember);
   //res.json()
   //because of security dont show json
-  res.json(members);
+  // res.json(members);
 
   //redirect
-  // res.redirect("/");
+  res.redirect("/");
 });
 
 //update member details on basis of id
