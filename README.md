@@ -369,9 +369,13 @@
       <code>
        app.engine("handlebars", exphbs({
         defaultLayout: "main" 
-        })); 
+        }));
+        </code> 
+        <code>
         app.set("view engine",
-        "handlebars"); 
+        "handlebars");
+        </code> 
+        <code>
         app.get("/", (req, res) => {
         res.render("index", { title: "Handlebars", members }); });
       </code>
