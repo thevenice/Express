@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //without express.json() we can't post object data of a body
 app.use(express.json());
 //and without express.url() we cant get value from form
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: false }));
 
 //using routes from routes/api folder
 app.use("/api/members", require("./routes/api/members"));

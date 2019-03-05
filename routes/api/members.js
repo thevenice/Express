@@ -59,4 +59,30 @@ router.post("/", (req, res) => {
   res.json(members);
 });
 
+//update member details on basis of id
+//to update data on server we use put() request
+router.put("/:id", (req, res) => {
+  //check if id contains same data in our array/db
+  //use some()
+  const found = members.some(member => member.id === parseInt(req.params.id));
+  if (found) {
+    //get request body
+    const updateMem = req.body;
+    //now compare this new info with each id in members
+    //parse update member id in integer
+    members.forEach(member => {
+      if (member.id === parseInt(req.params.id)) {
+        // lets  update member/name/email
+        member.name = updateMem.name ? updateMem.name : member.name;
+        member.email = updateMem.email ? updateMem.email : member.email;
+        //send json back
+        res.json({ msg: "member updated", member });
+      }
+    });
+  } else {
+    res
+      .status(400)
+      .json({ msg: `ERROR UNBLE TO FIND ID NO. : ${req.params.id}` });
+  }
+});
 module.exports = router;

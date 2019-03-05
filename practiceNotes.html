@@ -42,8 +42,9 @@
     <li>
       now we will create a Middleware
     </li>
-    <li></li>
-    it will be a logger function
+    <li>
+      it will be a logger function
+    </li>
     <li>
       it will take 3 params (req,res,next)
     </li>
@@ -197,5 +198,35 @@
     <code>
       app.use(express.urlencoded());
     </code>
+  </ul>
+</div>
+<div>
+  <h3>Update Value in DB using Express Put()</h3>
+  <ul>
+    <li>update member details on basis of id</li>
+    <li>to update data on server we use put() request</li>
+    <li>
+      check if id contains same data in our array/db by using some() and in it
+      compare member id with parsed Int req.params.id
+    </li>
+    <li>
+      get request body and assign it too new varibale called updatedMember
+    </li>
+
+    <li>
+      now compare this new info with each id in members
+    </li>
+    <li>
+      parse update member id in integer
+    </li>
+    <li>lets update member/name/email</li>
+    <li>
+      send json back
+    </li>
+    <li>
+      <code>
+        res.json({ msg: "member updated", member });
+      </code>
+    </li>
   </ul>
 </div>
