@@ -364,21 +364,21 @@
       now in our main server file index.js import express-handlebars as exphbs
       and create a Middleware. Middle will use .engine() and .set() methods.
     </li>
-    <li>
+    <ul>
       Example:
-      <code>
-       app.engine("handlebars", exphbs({
-        defaultLayout: "main" 
-        }));
-        </code> 
-        <code>
+     <li> <code>
+      app.engine("handlebars", exphbs({
+       defaultLayout: "main" 
+       }));
+       </code> </li>
+      <li>  <code>
         app.set("view engine",
         "handlebars");
-        </code> 
-        <code>
+        </code> </li>
+       <li> <code>
         app.get("/", (req, res) => {
         res.render("index", { title: "Handlebars", members }); });
-      </code>
-    </li>
+      </code></li>
+    </ul>
   </ul>
 </div>

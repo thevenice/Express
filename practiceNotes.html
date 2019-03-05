@@ -263,12 +263,19 @@
     </li>
     <li>
       Example:
-      <code>
-        //Handlebars Middleware //engine app.engine("handlebars", exphbs({
-        defaultLayout: "main" })); //set view engine app.set("view engine",
-        "handlebars"); // HomePage using Handlebars app.get("/", (req, res) => {
+     <li> <code>
+      app.engine("handlebars", exphbs({
+       defaultLayout: "main" 
+       }));
+       </code> </li>
+      <li>  <code>
+        app.set("view engine",
+        "handlebars");
+        </code> </li>
+       <li> <code>
+        app.get("/", (req, res) => {
         res.render("index", { title: "Handlebars", members }); });
-      </code>
-    </li>
+      </code></li>
+    </ul>
   </ul>
 </div>
