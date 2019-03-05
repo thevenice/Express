@@ -1,6 +1,8 @@
 const express = require("express");
 const members = require("../../Members");
 const router = express.Router();
+const uuid = require("uuid");
+
 //get All Members
 router.get("/", (req, res) => {
   res.json(members);
@@ -31,6 +33,30 @@ router.get("/:id", (req, res) => {
       .json({ msg: `ERROR UNBLE TO FIND ID NO. : ${req.params.id}` });
   }
   console.log(req.params.id);
+});
+
+//Create Members
+//mutation in express
+//for creating anything we use post()
+router.post("/", (req, res) => {
+  const newMember = {
+    id: uuid.v4(),
+    name: req.body.name,
+    email: req.body.email,
+    status: "inacitve"
+  };
+
+  //if we dont get name and email throw error
+  if (!newMember.name || !newMember.email) {
+    //we will use res.status() to send status code
+    //then we will use json to send newMem object
+    return res.status(400).json({ msg: `please include name and email` });
+  }
+
+  //then we will push this new member in old members array
+  members.push(newMember);
+  //res.json()
+  res.json(members);
 });
 
 module.exports = router;

@@ -156,3 +156,46 @@
     </li>
   </ul>
 </div>
+<div>
+  <h3>Mutation in API using Express</h3>
+  <ul>
+    <li>
+      Create new Member variable body{}
+    </li>
+    <li>
+      for creating any mutation/post in express we use post() request method
+    </li>
+    <li>
+      <code>router.post("/", callback)</code>
+    </li>
+    <li>we can dynamically get name and email from req.body.*</li>
+    <li>put condition if we dont get name and email throw error</li>
+    <li>we will use res.status() to send status code</li>
+    <li>then we will use json to send newMem object</li>
+    <li>
+      then we will push this new member in old members array and resolve this
+      members objects using res.json(members array here)
+    </li>
+  </ul>
+</div>
+<div>
+  <h3>Body Parser Middleware</h3>
+  <ul>
+    <li>
+      Body Parser Middleware is used to resolve and get the item we have posted
+      using post().
+    </li>
+    <li>
+      without express.json() we can't post object data of a body
+    </li>
+    <code>
+      app.use(express.json());
+    </code>
+    <li>
+      and without express.urlencoded() we cant get values from form
+    </li>
+    <code>
+      app.use(express.urlencoded());
+    </code>
+  </ul>
+</div>
