@@ -1,7 +1,7 @@
 <h1>Express Notes</h1>
 <br />
 <div>
-  <h3>Introdcution</h3>
+  <h3>Introduction</h3>
   <ul>
     <li>
       Express is a fast(high performance), (not high level, still rpvodes full
@@ -92,7 +92,7 @@
       request and response object. Express has built in Middleware but it also
       comes from 3rd party packages as well as custom middleware
     </li>
-    <li>Excute any code</li>
+    <li>Execute any code</li>
     <li>Make changes to request/response objects</li>
     <li>End Response cycle</li>
     <li>Call next middleware in the stack</li>
