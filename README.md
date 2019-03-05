@@ -90,7 +90,7 @@
     </li>
   </ul>
   
-    <h4>Single Member :</h4>
+   <h4>Single Member :</h4>
    <ul>
     <li>now we need to get :id at the end</li>
     <li>first we will use res.send() to send data in postman</li>
