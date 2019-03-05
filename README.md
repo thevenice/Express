@@ -1,5 +1,5 @@
 <h1>Express Notes</h1>
-<a href="https://warm-sierra-71335.herokuapp.com/">Visit End Product</a>
+<a href="https://warm-sierra-71335.herokuapp.com/" target="_blank">Visit End Product</a>
 <br />
 <div>
   <h3>Introduction</h3>
