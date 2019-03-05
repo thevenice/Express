@@ -33,7 +33,11 @@ app.get("/api/members/:id", (req, res) => {
   if (found) {
     res.json(members.filter(member => member.id === parseInt(req.params.id)));
   } else {
-    res.send("ERROR UNBLE TO FIND ID NO. :" + req.params.id);
+    //nice try
+    // res.send("ERROR UNBLE TO FIND ID NO. :" + req.params.id);
+    res
+      .status(400)
+      .json({ msg: `ERROR UNBLE TO FIND ID NO. : ${req.params.id}` });
   }
   console.log(req.params.id);
 });
