@@ -110,7 +110,7 @@
       it checks weather the given condition is true or false
     </li>
     <li>
-      in some() we will just pass a function that checks memeber.id=params.id
+      in some() we will just pass a function that checks member.id=params.id
     </li>
     <li>
       now apply condition if some() give true run res.json
@@ -228,5 +228,21 @@
         res.json({ msg: "member updated", member });
       </code>
     </li>
+  </ul>
+</div>
+<div>
+  <h3>Deleting a Member using Delete() request</h3>
+  <ul>
+    <li>create a route with delete() method of request</li>
+    <li>
+      again using some() check if we have member with same id client is
+      requesting
+    </li>
+    <li>
+      now if its true resolve the json by filtering out the members array, and
+      only display the remaining members(remaining members of the array, or we
+      can say members - requested member)
+    </li>
+    <li>thats it for CRUD in Express</li>
   </ul>
 </div>
