@@ -40,18 +40,18 @@
   <h3>We will create Middleware(logger )</h3>
   <ul>
     <li>
-      //now we will create a Middleware
+      now we will create a Middleware
     </li>
     <li></li>
-    // it will be a logger function
+    it will be a logger function
     <li>
-      // it will take 3 params (req,res,next)
+      it will take 3 params (req,res,next)
     </li>
     <li>
-      //here next is next function to run after resloving
+      here next is next function to run after resloving
     </li>
     <li>
-      //everytime we makes a request from server the middleware runs with it
+      everytime we makes a request from server the middleware runs with it
     </li>
     <li>to get protocols(http or https) use req.protocol</li>
     <li>to get hostname(localhost or mywebsite.com) use req.hostname</li>
@@ -72,6 +72,51 @@
     <li>
       to format it as current date format attach .format() method with moment()
     </li>
-    <li></li>
+  </ul>
+</div>
+
+<div>
+  <h3>How to get All Members and Single Member</h3>
+  <ul>
+    <h4>All Members :</h4>
+    <li>We wil use get() method</li>
+    <li>
+      In get Method we will pass first param our route which is "/api/members/"
+    </li>
+    <li>Second param is our callback fun() with re and res</li>
+    <li>
+      In it we will use resolve.json() method and we will pass our members array
+      in it, and thats it .
+    </li>
+  </ul>
+  <ul>
+    <h4>Single Member :</h4>
+
+    <li>now we need to get :id at the end</li>
+    <li>first we will use res.send() to send data in postman</li>
+    <li>then we will access params in request: req.params.""</li>
+    <li>member.id is number type</li>
+    <li>req.params.id is string type</li>
+    <li>
+      so we will use parser function : parseInt and put the req.params.id in it
+    </li>
+    <li>
+      we also throw error if member is not there
+    </li>
+    <li>
+      we will use .some() js method
+    </li>
+    <li>
+      it checks weather the given condition is true or false
+    </li>
+    <li>
+      in some() we will just pass a function that checks memeber.id=params.id
+    </li>
+    <li>
+      now apply condition if some() give true run res.json
+    </li>
+    <li>
+      if some() gives false run errormsg
+    </li>
   </ul>
 </div>
