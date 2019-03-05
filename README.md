@@ -302,3 +302,50 @@
     </code>
   </ul>
 </div>
+<div>
+  <h3>Update Value in DB using Express Put()</h3>
+  <ul>
+    <li>update member details on basis of id</li>
+    <li>to update data on server we use put() request</li>
+    <li>
+      check if id contains same data in our array/db by using some() and in it
+      compare member id with parsed Int req.params.id
+    </li>
+    <li>
+      get request body and assign it too new varibale called updatedMember
+    </li>
+
+    <li>
+      now compare this new info with each id in members
+    </li>
+    <li>
+      parse update member id in integer
+    </li>
+    <li>lets update member/name/email</li>
+    <li>
+      send json back
+    </li>
+    <li>
+      <code>
+        res.json({ msg: "member updated", member });
+      </code>
+    </li>
+
+  </ul>
+</div>
+<div>
+  <h3>Deleting a Member using Delete() request</h3>
+  <ul>
+    <li>create a route with delete() method of request</li>
+    <li>
+      again using some() check if we have member with same id client is
+      requesting
+    </li>
+    <li>
+      now if its true resolve the json by filtering out the members array, and
+      only display the remaining members(remaining members of the array, or we
+      can say members - requested member)
+    </li>
+    <li>thats it for CRUD in Express</li>
+  </ul>
+</div>
