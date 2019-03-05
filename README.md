@@ -1,3 +1,106 @@
+<h1>Express Notes</h1>
+<br />
+<div>
+  <h3>Introdcution</h3>
+  <ul>
+    <li>
+      Express is a fast(high performance), (not high level, still rpvodes full
+      control), minimalist web framework for Node.js
+    </li>
+    <li>
+      <b>"server-side"</b>
+      <b>"Backend"</b>
+      framework.
+    </li>
+    <li>
+      It is used with React,vue,Angular,..etc. front end framework to create a
+      fullstack Webapp .
+    </li>
+    <li>
+      We can built API with Express to take requests from frontend to render
+      client side views.
+    </li>
+  </ul>
+</div>
+<div>
+  <h3>Why to use Express ?</h3>
+  <ul>
+    <li>Easier to Build in compare to Node.</li>
+    <li>minimum codes.</li>
+    <li>Express used for API/JSON data,and also for server-rendered apps.</li>
+    <li>other less popular Node Frameworks: Koa, happyJS, ...</li>
+    <li>Great to use with Client side JS frameworks</li>
+  </ul>
+</div>
+<div>
+  <h3>Learn before Express</h3>
+  <ul>
+    <li>Basic knowleagde of NodeJS and NPM</li>
+
+    <li>JS fundamentals</li>
+    <li>HTTP Status Code</li>
+    <li>JSON</li>
+    <li>ES6+</li>
+
+  </ul>
+</div>
+<div>
+  <h3>Basic Route Handling</h3>
+  <ul>
+    <li>
+      app.get(),app.post(),app.put(),app.delete() etc are crud routes of
+      Express.
+    </li>
+    <li>
+      Express has router so we can store routes in separate files and export
+    </li>
+    <ul>
+      <h4>Handling requests/routes is simple</h4>
+      <b>within routes we can</b>
+      <span
+        ><li>
+          //Fetch data from DB
+        </li>
+        <li>
+          //Load pages
+        </li>
+        //Return JSON
+        <li>
+          //Full access to request & response
+        </li></span
+      >
+    </ul>
+    <ul>
+      <h4>About Request and Response</h4>
+      <p>
+        Request and Response objects are very important. The Request object
+        represents the HTTP request properties for things like "Url parameters",
+        "Query strings","Any daat that sent in the body","HTTP header", and all
+        the stuff is included in request. The Response Object represents HTTP
+        response its on use to send back response maybe "JSON data",
+        "Template","Redirect", ...etc.
+      </p>
+    </ul>
+    <li>We can parse incoming data with body Parser</li>
+  </ul>
+</div>
+<div>
+  <h3>Express Middleware</h3>
+  <ul>
+    <li>
+      Middleware functions are functions the have functions that have access to
+      request and response object. Express has built in Middleware but it also
+      comes from 3rd party packages as well as custom middleware
+    </li>
+    <li>Excute any code</li>
+    <li>Make changes to request/response objects</li>
+    <li>End Response cycle</li>
+    <li>Call next middleware in the stack</li>
+  </ul>
+</div>
+
+<span>---</span>
+
 <h1>Practical Notes</h1>
 <div>
   <h3>Error: Cannot GET "/"</h3>
@@ -154,5 +257,48 @@
     <li>
       and replace it with "/"
     </li>
+  </ul>
+</div>
+<div>
+  <h3>Mutation in API using Express</h3>
+  <ul>
+    <li>
+      Create new Member variable body{}
+    </li>
+    <li>
+      for creating any mutation/post in express we use post() request method
+    </li>
+    <li>
+      <code>router.post("/", callback)</code>
+    </li>
+    <li>we can dynamically get name and email from req.body.*</li>
+    <li>put condition if we dont get name and email throw error</li>
+    <li>we will use res.status() to send status code</li>
+    <li>then we will use json to send newMem object</li>
+    <li>
+      then we will push this new member in old members array and resolve this
+      members objects using res.json(members array here)
+    </li>
+  </ul>
+</div>
+<div>
+  <h3>Body Parser Middleware</h3>
+  <ul>
+    <li>
+      Body Parser Middleware is used to resolve and get the item we have posted
+      using post().
+    </li>
+    <li>
+      without express.json() we can't post object data of a body
+    </li>
+    <code>
+      app.use(express.json());
+    </code>
+    <li>
+      and without express.urlencoded() we cant get values from form
+    </li>
+    <code>
+      app.use(express.urlencoded());
+    </code>
   </ul>
 </div>
