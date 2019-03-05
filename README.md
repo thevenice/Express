@@ -315,7 +315,7 @@
       get request body and assign it too new varibale called updatedMember
     </li>
 
-    <li>
+ <li>
       now compare this new info with each id in members
     </li>
     <li>
