@@ -56,7 +56,11 @@ router.post("/", (req, res) => {
   //then we will push this new member in old members array
   members.push(newMember);
   //res.json()
+  //because of security dont show json
   res.json(members);
+
+  //redirect
+  // res.redirect("/");
 });
 
 //update member details on basis of id
