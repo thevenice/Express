@@ -119,3 +119,40 @@
     </li>
   </ul>
 </div>
+<div>
+  <h3>Routes folder</h3>
+  <ul>
+    <li>
+      create a routes/api/member.js file to relocate our app.use() methods that
+      provides single/all members
+    </li>
+    <li>
+      import express and than create a router using express.Router() with
+      Capatial R.
+    </li>
+    <li>
+      replace app with router and remove first param from all .use() methods.
+    </li>
+    <li>
+      replace it with "/" and "/:id as we are going to provide path in index
+      file
+    </li>
+    <li>
+      using routes from routes/api folder
+    </li>
+    <li>
+      <code>
+        app.use("/api/members", require("./routes/api/members"));
+      </code>
+    </li>
+    <li>
+      as we have define our router here
+    </li>
+    <li>
+      we have to remove our routes from routes/api/mem file
+    </li>
+    <li>
+      and replace it with "/"
+    </li>
+  </ul>
+</div>

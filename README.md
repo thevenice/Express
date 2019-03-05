@@ -77,8 +77,8 @@
 
 <div>
   <h3>How to get All Members and Single Member</h3>
+  <h4>All Members :</h4>
   <ul>
-    <h4>All Members :</h4>
     <li>We wil use get() method</li>
     <li>
       In get Method we will pass first param our route which is "/api/members/"
@@ -89,9 +89,8 @@
       in it, and thats it .
     </li>
   </ul>
-  
-   <h4>Single Member :</h4>
-   <ul>
+  <h4>Single Member :</h4>
+  <ul>
     <li>now we need to get :id at the end</li>
     <li>first we will use res.send() to send data in postman</li>
     <li>then we will access params in request: req.params.""</li>
@@ -117,6 +116,43 @@
     </li>
     <li>
       if some() gives false run errormsg
+    </li>
+  </ul>
+</div>
+<div>
+  <h3>Routes folder</h3>
+  <ul>
+    <li>
+      create a routes/api/member.js file to relocate our app.use() methods that
+      provides single/all members
+    </li>
+    <li>
+      import express and than create a router using express.Router() with
+      Capatial R.
+    </li>
+    <li>
+      replace app with router and remove first param from all .use() methods.
+    </li>
+    <li>
+      replace it with "/" and "/:id as we are going to provide path in index
+      file
+    </li>
+    <li>
+      using routes from routes/api folder
+    </li>
+    <li>
+      <code>
+        app.use("/api/members", require("./routes/api/members"));
+      </code>
+    </li>
+    <li>
+      as we have define our router here
+    </li>
+    <li>
+      we have to remove our routes from routes/api/mem file
+    </li>
+    <li>
+      and replace it with "/"
     </li>
   </ul>
 </div>
