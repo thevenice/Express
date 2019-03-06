@@ -5,7 +5,7 @@
   <h3>Introduction</h3>
   <ul>
     <li>
-      Express is a fast(high performance), (not high level, still rpvodes full
+      Express is a fast(high performance), (not high level, still provides full
       control), minimalist web framework for Node.js
     </li>
     <li>
@@ -36,8 +36,7 @@
 <div>
   <h3>Learn before Express</h3>
   <ul>
-    <li>Basic knowleagde of NodeJS and NPM</li>
-
+    <li>Basic knowleadge of NodeJS and NPM</li>
     <li>JS fundamentals</li>
     <li>HTTP Status Code</li>
     <li>JSON</li>
@@ -76,7 +75,7 @@
       <p>
         Request and Response objects are very important. The Request object
         represents the HTTP request properties for things like "Url parameters",
-        "Query strings","Any daat that sent in the body","HTTP header", and all
+        "Query strings","Any data that sent in the body","HTTP header", and all
         the stuff is included in request. The Response Object represents HTTP
         response its on use to send back response maybe "JSON data",
         "Template","Redirect", ...etc.
@@ -89,7 +88,7 @@
   <h3>Express Middleware</h3>
   <ul>
     <li>
-      Middleware functions are functions the have functions that have access to
+      Middleware functions are functions that have access to
       request and response object. Express has built in Middleware but it also
       comes from 3rd party packages as well as custom middleware
     </li>
@@ -135,7 +134,7 @@
   </p>
   <p>
     we use express for things like JSON API so that we can connect frontend
-    framework woth our express server, or we can create templates where we can
+    framework with our express server, or we can create templates where we can
     add dynamic data instead of static web app.
   </p>
 </div>
@@ -197,7 +196,7 @@
   <ul>
     <li>now we need to get :id at the end</li>
     <li>first we will use res.send() to send data in postman</li>
-    <li>then we will access params in request: req.params.""</li>
+    <li>then we will access params in request: req.params.id</li>
     <li>member.id is number type</li>
     <li>req.params.id is string type</li>
     <li>
@@ -213,13 +212,13 @@
       it checks weather the given condition is true or false
     </li>
     <li>
-      in some() we will just pass a function that checks memeber.id=params.id
+      in some() we will just pass a function that checks member.id=params.id
     </li>
     <li>
       now apply condition if some() give true run res.json
     </li>
     <li>
-      if some() gives false run errormsg
+      if some() gives false run error msg
     </li>
   </ul>
 </div>
